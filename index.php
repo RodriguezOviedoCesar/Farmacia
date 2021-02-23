@@ -21,9 +21,9 @@
                     <img src="../Farmacia2/others/img/login.png">
                 </div>
                 <form action="" method="POST">
-                    <span style="margin-bottom: 10px;"><i class="fas fa-user"></i>Ingresar Email</span>
+                    <span style="margin-bottom: 10px;">Ingresar Email</span>
                     <input required style="margin-bottom: 15px;" class="form-control" aria-describedby="emailHelp" type="email" name="User" id="">
-                    <span style="margin-bottom: 10px;"><i class="fas fa-key"></i>Password</span>
+                    <span style="margin-bottom: 10px;">Password</span>
                     <input required style="margin-bottom: 15px;" class="form-control" aria-describedby="passwordHelpBlock" type="password" name="Pass" id="">
                     <div id="botones">
                         <input class="btn btn-success" type="submit" value="Enviar" name="btnEnviar">
