@@ -1,3 +1,36 @@
+<?php
+
+require '../Farmacia2/model/conexion.php';
+
+$sql = "SELECT * FROM usario";
+
+$result = $mysqli->query($sql);
+
+$fallos_sesion=false;
+
+    if(isset($_POST['Enviar'])){
+
+        $user = $_POST['User'];
+        $pass = $_POST['Pass'];
+        $sql = "SELECT * FROM usario WHERE email=$user and pass = $pass ";
+        $sentencia = $mysqli->query($sql);
+        
+        if($result){
+            if($result->num_rows>0){
+                while($id = $result->fetch_assoc()){
+                    if($user === $id['email']&&$pass === $id['pass']){
+                        header('location:view/index.php');
+                }
+            }
+            }
+        }
+    }
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -17,16 +50,17 @@
     <div id="login">
         <div id="login1">
             <div id="login2">
+
                 <div style="margin-top: -35px;" id="imagen">
                     <img src="../Farmacia2/others/img/login.png">
                 </div>
-                <form action="" method="POST">
-                    <span style="margin-bottom: 10px;"><i class="fas fa-user"></i>Ingresar Email</span>
-                    <input required style="margin-bottom: 15px;" class="form-control" aria-describedby="emailHelp" type="email" name="User" id="">
-                    <span style="margin-bottom: 10px;"><i class="fas fa-key"></i>Password</span>
-                    <input required style="margin-bottom: 15px;" class="form-control" aria-describedby="passwordHelpBlock" type="password" name="Pass" id="">
+                <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+                    <span style="margin-bottom: 10px;">Ingresar Email</span>
+                    <input required style="margin-bottom: 15px;" class="form-control" aria-describedby="emailHelp" type="email" name="User" id="" placeholder="Ingresa tú email">
+                    <span style="margin-bottom: 10px;">Password</span>
+                    <input required style="margin-bottom: 15px;" class="form-control" aria-describedby="passwordHelpBlock" type="password" name="Pass" id="" placeholder="Ingresa tu contraseña">
                     <div id="botones">
-                        <input class="btn btn-success" type="submit" value="Enviar" name="btnEnviar">
+                        <input class="btn btn-success" type="submit" value="Enviar" name="Enviar">
                         <input class="btn btn-danger" type="reset" value="Cancelar">
                     </div>
                 </form>
