@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Libre';
+    src: url(../fonts/SpaceMono-Bold.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#login {
+    background-image: url(../img/fondo.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#login1 {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+#login2 {
+    width: 450px;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 59px;
+    border: 4px solid white!important;
+    padding: 50px;
+    background-color: rgb(116, 109, 109);
+}
+
+#botones {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#imagen {
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 50px;
+    border-radius: 999px;
+}
+
+form {
+    margin-top: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+span {
+    color: white;
+    font-family: 'Libre';
+}
