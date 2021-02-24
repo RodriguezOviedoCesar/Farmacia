@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="../others/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../others/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../others/icons/css/all.css">
     <style>
@@ -50,7 +51,7 @@
                     <div class="card-body ">
                         <h5 class="card-title ">Doctores</h5>
                         <p class="card-text ">Mostrar lista de Docotres disponibles</p>
-                        <a href="# " class="btn btn-primary ">Ir a Doctores</a>
+                        <a href="../view/doctores.php " class="btn btn-dark ">Ir a Doctores</a>
                     </div>
                 </div>
                 <div class="card " style="width: 18rem; flex-basis: 28%;margin: 15px; ">
@@ -58,7 +59,7 @@
                     <div class="card-body ">
                         <h5 class="card-title ">Productos</h5>
                         <p class="card-text ">Mostar la lista de productos disponibles en Stock</p>
-                        <a href="# " class="btn btn-primary ">Ir a productos</a>
+                        <a href="../view/producto.php" class="btn btn-dark ">Ir a productos</a>
                     </div>
                 </div>
                 <div class="card " style="width: 18rem;  flex-basis: 28%;margin: 15px;">
@@ -66,7 +67,7 @@
                     <div class="card-body ">
                         <h5 class="card-title ">Clientes</h5>
                         <p class="card-text ">Mostrar lista de clientes registrados</p>
-                        <a href="# " class="btn btn-primary ">Ir a clientes</a>
+                        <a href="# " class="btn btn-dark ">Ir a clientes</a>
                     </div>
                 </div>
                 <div class="card " style="width: 18rem; flex-basis: 28%;margin: 15px;">
@@ -74,7 +75,7 @@
                     <div class="card-body ">
                         <h5 class="card-title ">Trabajadores</h5>
                         <p class="card-text ">Mostar lista de trabajodores en Farmacia</p>
-                        <a href="# " class="btn btn-primary ">Ir a trabajadores</a>
+                        <a href="../view/empleado.php" class="btn btn-dark ">Ir a trabajadores</a>
                     </div>
                 </div>
                 <div class="card " style="width: 18rem;flex-basis: 28%; margin: 15px;">
@@ -82,7 +83,7 @@
                     <div class="card-body ">
                         <h5 class="card-title ">Pedidos</h5>
                         <p class="card-text ">Mostar lista de Pedidos</p>
-                        <a href="# " class="btn btn-primary ">Ir a Pedidos</a>
+                        <a href="# " class="btn btn-dark ">Ir a Pedidos</a>
                     </div>
                 </div>
             </div>

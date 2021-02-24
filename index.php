@@ -19,7 +19,7 @@ $fallos_sesion=false;
             if($result->num_rows>0){
                 while($id = $result->fetch_assoc()){
                     if($user === $id['email']&&$pass === $id['pass']){
-                        header('location:view/index.html');
+                        header('location:view/index.php');
                     }
                 }
             }

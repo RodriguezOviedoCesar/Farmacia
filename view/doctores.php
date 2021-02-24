@@ -100,7 +100,7 @@ $result = $mysqli->query($sql);
                         </span>
                     </button>
                 </a>
-                <a href="../index.php">
+                <a href="../view/index.php">
                     <button class="btn btn-primary" type="button">
                         <span>Regresar
                             <i class="fas fa-arrow-circle-left"></i>

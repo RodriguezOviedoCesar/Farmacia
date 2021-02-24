@@ -1,0 +1,35 @@
+#contenedor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#img {
+    margin-top: -200px;
+}
+
+#contenedordoctor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+}
+
+table {
+    margin-top: -200px;
+}
+
+@media(max-width:750px) {
+    #img {
+        padding-left: 15px !important;
+    }
+}
+
+@media(max-width:750px) {
+    #img {
+        padding-left: 85px !important;
+    }
+}

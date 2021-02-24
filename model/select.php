@@ -25,7 +25,7 @@ class Select
             <title>Document</title>
             <link rel="stylesheet" href="../others/bootstrap/css/bootstrap.min.css">
             <link rel="stylesheet" href="../others/icons/css/all.css">
-            <link rel="stylesheet" href="../others/css/doctores.css">
+            <link rel="stylesheet" href="../others/css/select.css">
         </head>
 
         <body>
@@ -114,7 +114,7 @@ class Select
                                 </span>
                             </button>
                         </a>
-                        <a href="../index.php">
+                        <a href="../view/index.php">
                             <button class="btn btn-primary" type="button">
                                 <span>Regresar
                                     <i class="fas fa-arrow-circle-left"></i>
