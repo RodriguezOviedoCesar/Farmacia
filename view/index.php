@@ -1,14 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../others/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../others/icons/css/all.css">
+    <style>
+        #contenedor {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #contenedor1 {
+            width: 90%;
+        }
+        
+        #cajitas {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 25px;
+            justify-content: center;
+        }
+    </style>
 </head>
-<body>
-    <h1>
 
-    </h1>
+<body style=" background-color: #ccc; ">
+    <div id="contenidoca " class="navbar navbar-dark bg-dark ">
+        <div id="contenidocab">
+            <header id="header " style="display: flex;flex-direction:row; ">
+                <div id="imagen ">
+                    <img style="margin-left: 15px;width: 160px; height: 65px; " src="../others/img/logo.png ">
+                </div>
+                <p style="color: white; margin-left: 15px; font-size: 35px; font-style: italic; ">Bienvenido</p>
+            </header>
+        </div>
+    </div>
+
+    <div id="contenedor">
+        <div id="contenedor1">
+            <div id="cajitas">
+                <div class="card" style="width: 18rem; flex-basis: 28%; margin: 15px;">
+                    <img src="../others/img/doctor.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Doctores</h5>
+                        <p class="card-text ">Mostrar lista de Docotres disponibles</p>
+                        <a href="# " class="btn btn-primary ">Ir a Doctores</a>
+                    </div>
+                </div>
+                <div class="card " style="width: 18rem; flex-basis: 28%;margin: 15px; ">
+                    <img src="../others/img/Productos.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Productos</h5>
+                        <p class="card-text ">Mostar la lista de productos disponibles en Stock</p>
+                        <a href="# " class="btn btn-primary ">Ir a productos</a>
+                    </div>
+                </div>
+                <div class="card " style="width: 18rem;  flex-basis: 28%;margin: 15px;">
+                    <img src="../others/img/user.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Clientes</h5>
+                        <p class="card-text ">Mostrar lista de clientes registrados</p>
+                        <a href="# " class="btn btn-primary ">Ir a clientes</a>
+                    </div>
+                </div>
+                <div class="card " style="width: 18rem; flex-basis: 28%;margin: 15px;">
+                    <img src="../others/img/trabajador.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Trabajadores</h5>
+                        <p class="card-text ">Mostar lista de trabajodores en Farmacia</p>
+                        <a href="# " class="btn btn-primary ">Ir a trabajadores</a>
+                    </div>
+                </div>
+                <div class="card " style="width: 18rem;flex-basis: 28%; margin: 15px;">
+                    <img src="../others/img/pedido.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Pedidos</h5>
+                        <p class="card-text ">Mostar lista de Pedidos</p>
+                        <a href="# " class="btn btn-primary ">Ir a Pedidos</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </body>
+
+<head>
+    <script type="text/javascript " src="../others/bootstrap/jquery-3.5.1.min.js "></script>
+    <script type="text/javascript " src="../others/bootstrap/js/bootstrap.min.js "></script>
+    <script type="text/javascript " src="../others/icons/js/all.js "></script>
+</head>
+
 </html>
