@@ -28,17 +28,32 @@
             margin-top: 25px;
             justify-content: center;
         }
+
     </style>
 </head>
 
 <body style=" background-color: #ccc; ">
     <div id="contenidoca " class="navbar navbar-dark bg-dark ">
-        <div id="contenidocab">
-            <header id="header " style="display: flex;flex-direction:row; ">
-                <div id="imagen ">
+        <div id="contenidocab" style="width:100%">
+            <header id="header " style="display: flex;flex-direction:row; align-items:center; justify-content:space-around">
+                <div id="imagen " style="display: flex;flex-direction:row">
                     <img style="margin-left: 15px;width: 160px; height: 65px; " src="../others/img/logo.png ">
+                    <p style="color: white; margin-left: 15px; font-size: 35px; font-style: italic; ">Bienvenido</p>
                 </div>
-                <p style="color: white; margin-left: 15px; font-size: 35px; font-style: italic; ">Bienvenido</p>
+                <div>
+                <a href="../index.php">
+                            <button class="btn btn-danger" type="button">
+                                <span>Salir
+                                    <i class="fas fa-arrow-circle-left"></i>
+                                    <?php
+                                        require '../model/conexion.php';
+
+                                        mysqli_close($mysqli);
+                                    ?>
+                                </span>
+                            </button>
+                        </a>
+                </div>
             </header>
         </div>
     </div>
@@ -47,7 +62,7 @@
         <div id="contenedor1">
             <div id="cajitas">
                 <div class="card" style="width: 18rem; flex-basis: 28%; margin: 15px;">
-                    <img src="../others/img/doctor.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <img src="../others/img/doctor.png" class="card-img-top img-fluid" alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
                     <div class="card-body ">
                         <h5 class="card-title ">Doctores</h5>
                         <p class="card-text ">Mostrar lista de Docotres disponibles</p>
@@ -55,7 +70,7 @@
                     </div>
                 </div>
                 <div class="card " style="width: 18rem; flex-basis: 28%;margin: 15px; ">
-                    <img src="../others/img/Productos.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <img src="../others/img/Productos.png" class="card-img-top img-fluid " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
                     <div class="card-body ">
                         <h5 class="card-title ">Productos</h5>
                         <p class="card-text ">Mostar la lista de productos disponibles en Stock</p>
@@ -63,15 +78,15 @@
                     </div>
                 </div>
                 <div class="card " style="width: 18rem;  flex-basis: 28%;margin: 15px;">
-                    <img src="../others/img/user.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <img src="../others/img/user.png" class="card-img-top img-fluid" alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
                     <div class="card-body ">
                         <h5 class="card-title ">Clientes</h5>
                         <p class="card-text ">Mostrar lista de clientes registrados</p>
-                        <a href="# " class="btn btn-dark ">Ir a clientes</a>
+                        <a href="../view/clientes.php" class="btn btn-dark ">Ir a clientes</a>
                     </div>
                 </div>
                 <div class="card " style="width: 18rem; flex-basis: 28%;margin: 15px;">
-                    <img src="../others/img/trabajador.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <img src="../others/img/trabajador.png" class="card-img-top img-fluid " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
                     <div class="card-body ">
                         <h5 class="card-title ">Trabajadores</h5>
                         <p class="card-text ">Mostar lista de trabajodores en Farmacia</p>
@@ -79,11 +94,11 @@
                     </div>
                 </div>
                 <div class="card " style="width: 18rem;flex-basis: 28%; margin: 15px;">
-                    <img src="../others/img/pedido.png" class="card-img-top " alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <img src="../others/img/pedido.png" class="card-img-top img-fluid" alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
                     <div class="card-body ">
                         <h5 class="card-title ">Pedidos</h5>
                         <p class="card-text ">Mostar lista de Pedidos</p>
-                        <a href="# " class="btn btn-dark ">Ir a Pedidos</a>
+                        <a href="../view/pedidos.php" class="btn btn-dark ">Ir a Pedidos</a>
                     </div>
                 </div>
             </div>

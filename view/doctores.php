@@ -94,7 +94,8 @@ $result = $mysqli->query($sql);
             </table>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 150px;">
                 <a href="">
-                    <button class="btn btn-success me-md-2" type="button">
+              
+                <button class="btn btn-success me-md-2" type="button">
                         <span>Agregar
                             <i class="fas fa-user-plus"></i>
                         </span>
