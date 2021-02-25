@@ -24,7 +24,7 @@ $result = $mysqli->query($sql);
     <link rel="stylesheet" type = "text/css" href="../others/css/doctores.css">
 </head>
 
-<body >
+<body>
     <div id="contenedor">
         <div id="contenedordoctor">
             <div id="img">
@@ -46,7 +46,7 @@ $result = $mysqli->query($sql);
                         while ($doctores = $result->fetch_assoc()) {
                 ?>
 
-                            <tr style="overflow-y:scroll;">
+                            <tr style="overflow-y:scroll;" >
                                 <td><?php echo $doctores['iddoctor'] ?></td>
                                 <td><?php echo $doctores['Nombre'] ?></td>
                                 <td><?php echo $doctores['Especialidad'] ?></td>
@@ -54,7 +54,7 @@ $result = $mysqli->query($sql);
                                 <td><?php echo $doctores['Cargo'] ?></td>
                                 <td style="border: none;">
                                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                        <a href="../model/borrardoctor.php?php echo $doctores ['iddoctor']?>">
+                                        <a href="../model/borrardoctor.php?iddoctor=<?php echo $doctores ['iddoctor']?>">
                                             <button class="btn btn-danger me-md-2" type="button">
                                                 <i class="fas fa-trash"></i>
                                             </button>
@@ -90,7 +90,7 @@ $result = $mysqli->query($sql);
                 }
                 ?>
             </table>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 150px;">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 150px; margin-bottom:50px">
                 <a href="">
               
                 <button class="btn btn-success me-md-2" type="button">

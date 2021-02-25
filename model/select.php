@@ -34,7 +34,7 @@ class Select
                     <div id="img">
                         <img class="img-fluid" src="../others/img/logo.png" alt="logo" title="logo">
                     </div>
-                    <table class="table">
+                    <table class="table" style="margin-bottom: 80px;">
                         <tr class="table-dark">
                             <?php
                             foreach ($parametros as $parametro) {

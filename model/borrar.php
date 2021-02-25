@@ -1,4 +1,5 @@
 <?php
+    error_reporting(0);
 
     function Imprimir($refe){
             echo "<a href='../view/$refe.php'>";
@@ -30,9 +31,12 @@
     <link rel="stylesheet" href="../others/icons/css/all.css">
 </head>
 <body>
-<div class="alert alert-success" role="alert">
+            <div class="alert alert-success" role="alert">
                 Registro borrado correctamente
             </div>
+
+
+
 <?php
         }else{
 ?>
