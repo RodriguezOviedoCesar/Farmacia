@@ -3,7 +3,7 @@ error_reporting(0);
 
 function Imprimir($refe)
 {
-    echo "<a href='../view/$refe.php' style:'margin-bottom:60px'>";
+    echo "<a href='../view/$refe.php'>";
     echo "<button class='btn btn-primary' type='button'>";
     echo "<span>Regresar";
     echo "<i class='fas fa-arrow-circle-left'></i>";
@@ -67,7 +67,7 @@ function Borrar($data, $id, $idC)
                         }
                             ?>
 
-                    <div>
+                    <div style="margin-bottom: 15px;">
                         <?php
                         if ($_GET['idproducto']) {
                             Imprimir('producto');
