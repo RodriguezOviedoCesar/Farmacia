@@ -11,7 +11,11 @@ if(isset($_GET['iddoctor'])){
     }else{
         $sql = "DELETE FROM doctor WHERE iddoctor = $id";
         $result = $mysqli->query($sql);
-        return $result;
+        if($result){
+            echo "<div class='alert alert-success' role='alert'>";
+            echo       "Registro borrado correctamente";
+            echo  "</div>";
+        }
     }
 }else{
     $errors [] = "Intentalo mas tarde";
@@ -46,13 +50,6 @@ if(isset($_GET['iddoctor'])){
                     </div>
             <?php
                     }
-                }else{
-            ?>
-                <div class="alert alert-success" role="alert">
-                    Registro borrado correctamente
-                </div>
-
-            <?php
                 }
             ?>
                 <a href="../view/doctores.php">

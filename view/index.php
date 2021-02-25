@@ -58,7 +58,7 @@
         </div>
     </div>
 
-    <div id="contenedor">
+    <div id="contenedor" style="margin-bottom: 50px;">
         <div id="contenedor1">
             <div id="cajitas">
                 <div class="card" style="width: 18rem; flex-basis: 28%; margin: 15px;">
