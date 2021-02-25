@@ -1,5 +1,15 @@
 <?php
 
+    function Imprimir($refe){
+            echo "<a href='../view/$refe.php'>";
+            echo "<button class='btn btn-primary' type='button'>";
+            echo "<span>Regresar";
+            echo "<i class='fas fa-arrow-circle-left'></i>";
+            echo "</span>";
+            echo "</button>";
+            echo "</a>";
+    }
+
     function Borrar($data, $id , $idC){
         include '../model/conexion.php';
 
@@ -37,17 +47,13 @@
 <div>
     <?php
         if($_GET['idproducto']){
-            echo "<a href='../view/producto.php'>";
-            echo   "<button type='button' class='btn btn-primary'>Regresar</button>";
-            echo "</a>";
+            Imprimir('producto');
         }elseif($_GET['idcliente']){
-            echo "<a href='../view/clientes.php'>";
-            echo   "<button type='button' class='btn btn-primary'>Regresar</button>";
-            echo "</a>";
+            Imprimir('clientes');
         }elseif ($_GET['idempleado']) {
-            echo "<a href='../view/clientes.php'>";
-            echo   "<button type='button' class='btn btn-primary'>Regresar</button>";
-            echo "</a>";
+            Imprimir('empleado');
+        }elseif ($_GET['nropedido']) {
+            Imprimir('pedidos');
         }
     ?>
 </div>
@@ -68,8 +74,10 @@
     }else if($_GET['idempleado']){
         $empelado = $_GET['idempleado'];
         Borrar('empleado',$empelado,'idempleado');
+    }else if($_GET['nropedido']){
+        $pedido = $_GET['nropedido'];
+        Borrar('pedido',$pedido,'nropedido');
     }
-    
 
 
 ?>

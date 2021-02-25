@@ -54,9 +54,7 @@ $result = $mysqli->query($sql);
                                 <td><?php echo $doctores['Cargo'] ?></td>
                                 <td style="border: none;">
                                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                        <a href="../controlador/borrar.php?iddoctor=<?php 
-                                            echo $doctores ['iddoctor']
-                                        ?>">
+                                        <a href="../model/borrardoctor.php?php echo $doctores ['iddoctor']?>">
                                             <button class="btn btn-danger me-md-2" type="button">
                                                 <i class="fas fa-trash"></i>
                                             </button>
