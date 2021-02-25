@@ -62,7 +62,6 @@ class Select
                             if ($result) {
                                 if ($result->num_rows > 0) {
                                     while ($id = $result->fetch_assoc()) {
-
                         ?>
                                         <tr>
                                             <?php
@@ -75,7 +74,7 @@ class Select
                                             ?>
                                             <td style="border: none;">
                                                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                                    <a href="">
+                                                    <a href="../model/borrar.php?<?php echo $datos[0]?>=<?php echo $id[$datos[0]]?>">
                                                         <button class="btn btn-danger me-md-2" type="button">
                                                             <i class="fas fa-trash"></i>
                                                         </button>
