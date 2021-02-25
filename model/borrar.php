@@ -16,22 +16,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../others/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../others/icons/css/all.css">
 </head>
 <body>
 <div class="alert alert-success" role="alert">
-                A simple success alert—check it out!
+                Registro borrado correctamente
             </div>
 <?php
         }else{
 ?>
             <div class="alert alert-danger" role="alert">
-                A simple success alert—check it out!
+                Error al borrar el registro
             </div>
 <?php
         }
     }
 ?>
+
+<div>
+    <?php
+        if($_GET['idproducto']){
+            echo "<a href='../view/producto.php'>";
+            echo   "<button type='button' class='btn btn-primary'>Regresar</button>";
+            echo "</a>";
+        }elseif($_GET['idcliente']){
+            echo "<a href='../view/clientes.php'>";
+            echo   "<button type='button' class='btn btn-primary'>Regresar</button>";
+            echo "</a>";
+        }elseif ($_GET['idempleado']) {
+            echo "<a href='../view/clientes.php'>";
+            echo   "<button type='button' class='btn btn-primary'>Regresar</button>";
+            echo "</a>";
+        }
+    ?>
+</div>
+
 </body>
+
 </html>
 
 <?php
@@ -42,10 +64,10 @@
         Borrar('producto',$producto,'idproducto');
     }else if($_GET['idcliente']){
         $cliente = $_GET['idcliente'];
-        echo $cliente;
+        Borrar('cliente',$cliente,'idcliente');
     }else if($_GET['idempleado']){
         $empelado = $_GET['idempleado'];
-        echo $empelado;
+        Borrar('empleado',$empelado,'idempleado');
     }
     
 

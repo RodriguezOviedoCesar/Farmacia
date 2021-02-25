@@ -76,7 +76,7 @@ $result = $mysqli->query($sql);
                 <?php
                         }
                     } else {
-                        $errors[] = "No hay registros pendientes";
+                        $errors[] = "No hay Registros en la tabla";
                     }
                 } else {
                     $errors[] = "Lo sentimos intentalo mas tarde";
@@ -84,9 +84,9 @@ $result = $mysqli->query($sql);
 
 
                 if (count($errors) > 0) {
-                    echo "<div class  = 'errores'>";
-                    foreach ($error as $errors) {
-                        echo "El error es " . $error . " nro de error " . $errors;
+                    echo "<div class='alert alert-danger' role='alert'>";
+                    foreach ($errors as $error) {
+                        echo $error;
                     }
                     echo "</div>";
                 }

@@ -50,9 +50,10 @@ class Select
                         <?php
 
                         try {
+                            $errors = array();
                             $sql = "SELECT * FROM $data ";
                             $result = $mysqli->query($sql);
-
+                            
                             // $id = $result->fetch_assoc();            
                             // $fila = $result->fetch_assoc();
                             // echo "</div>";
@@ -95,8 +96,21 @@ class Select
                 <?php
 
                                     }
+                                }else{
+                                    $errors [] = "No hay registros para mostrar";
                                 }
+                            }else{
+                                $errors [] = "No hay registros para mostrar";
                             }
+
+                            if (count($errors) > 0) {
+                                echo "<div class='alert alert-danger' role='alert'>";
+                                foreach ($errors as $error) {
+                                    echo $error;
+                                }
+                                echo "</div>";
+                            }
+
                         } catch (Exception $errors) {
                             echo "Excepcion  " . $errors;
                         }
