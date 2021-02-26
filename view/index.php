@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../others/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../others/icons/css/all.css">
     <style>
+    
         #contenedor {
             width: 100%;
             display: flex;
@@ -48,7 +49,7 @@
                                     <?php
                                         require '../model/conexion.php';
 
-                                        mysqli_close($mysqli);
+                                        $mysqli->close();
                                     ?>
                                 </span>
                             </button>

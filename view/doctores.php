@@ -91,7 +91,7 @@ $result = $mysqli->query($sql);
                 ?>
             </table>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 150px; margin-bottom:50px">
-                <a href="">
+                <a href="../view/insertardoctores.php">
               
                 <button class="btn btn-success me-md-2" type="button">
                         <span>Agregar
