@@ -21,7 +21,7 @@ $result = $mysqli->query($sql);
     <link rel="shortcut icon" href="../others/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../others/icons/css/all.css">
     <link rel="stylesheet" href="../others/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type = "text/css" href="../others/css/doctores.css">
+    <link rel="stylesheet" type="text/css" href="../others/css/doctores.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@ $result = $mysqli->query($sql);
                         while ($doctores = $result->fetch_assoc()) {
                 ?>
 
-                            <tr style="overflow-y:scroll;" >
+                            <tr style="overflow-y:scroll;">
                                 <td><?php echo $doctores['iddoctor'] ?></td>
                                 <td><?php echo $doctores['Nombre'] ?></td>
                                 <td><?php echo $doctores['Especialidad'] ?></td>
@@ -54,7 +54,7 @@ $result = $mysqli->query($sql);
                                 <td><?php echo $doctores['Cargo'] ?></td>
                                 <td style="border: none;">
                                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                        <a href="../model/borrardoctor.php?iddoctor=<?php echo $doctores ['iddoctor']?>">
+                                        <a href="../model/borrardoctor.php?iddoctor=<?php echo $doctores['iddoctor'] ?>">
                                             <button class="btn btn-danger me-md-2" type="button">
                                                 <i class="fas fa-trash"></i>
                                             </button>
@@ -92,8 +92,8 @@ $result = $mysqli->query($sql);
             </table>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 150px; margin-bottom:50px">
                 <a href="../view/insertardoctores.php">
-              
-                <button class="btn btn-success me-md-2" type="button">
+
+                    <button class="btn btn-success me-md-2" type="button">
                         <span>Agregar
                             <i class="fas fa-user-plus"></i>
                         </span>
@@ -109,11 +109,25 @@ $result = $mysqli->query($sql);
             </div>
         </div>
     </div>
+    <div id="res"></div>
 </body>
 
 <head>
     <script type="text/javascript" src="../others/bootstrap/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../others/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#enviar').click(function() {
+            $.ajax({
+                url: 'insertardoctores.php',
+                type: 'POST',
+                data: $('#form').serialize(),
+                success: function(res) {
+                    $('#res').html(res);
+                }
+            })
+
+        });
+    </script>
 </head>
 
 </html>

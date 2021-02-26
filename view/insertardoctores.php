@@ -4,25 +4,25 @@ require '../model/conexion.php';
 
 $errors = array();
 
-if(isset($_POST['enviar'])){
+if (isset($_POST['enviar'])) {
     //Si existe el elemento 
     $nombre = $_POST['names'];
     $especialidad = $_POST['espe'];
     $colegiado = $_POST['num'];
     $cargo = $_POST['cargo'];
 
-    if(!empty($nombre)&&!empty($especialidad)&&!empty($colegiado)&&!empty($cargo)){
+    if (!empty($nombre) && !empty($especialidad) && !empty($colegiado) && !empty($cargo)) {
         //No se encuentra vacia ninguna variable
         $sql = "INSERT INTO doctor (Nombre,Especialidad,ncolegiado,Cargo) VALUES ('$nombre','$especialidad','$colegiado','$cargo')";
         $resul = $mysqli->query($sql);
-    }else{
-        $errors [] = "Rellena Todos los campos";
+        if($resul){
+            return "Registrado correctamente";
+        }
     }
+} else {
+    $errors[] = "Rellena Todos los campos";
 }
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +34,7 @@ if(isset($_POST['enviar'])){
     <link rel="stylesheet" type="text/css" href="../others/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../others/icons/css/all.css">
     <link rel="stylesheet" type="text/css" href="../others/css/insertardoctor.css">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -44,13 +44,31 @@ if(isset($_POST['enviar'])){
                 <h1>Registro de Doctores</h1>
             </div>
             <div id="formulario">
-                <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+                <form action="<?php //echo $_SERVER['PHP_SELF'] ?>" method="POST">
                     NOMBRES: <input type="text" name="names" placeholder="Nombres de doctores" class="form-control" id="validationDefault01" required>
                     ESPECIALIDAD: <input type="text" name="espe" placeholder="Especialidad del doctor" class="form-control" id="validationDefault01" required>
                     NRO. COLEGIADO: <input type="text" name="num" placeholder="Nro de Colegiado" class="form-control" id="validationDefault01" required>
                     CARGO: <input type="text" name="cargo" placeholder="Cargo que desarrolla" class="form-control" id="validationDefault01" required>
                     <div id="botones">
-                        <input type="submit" value="Enviar" name="enviar" class="btn btn-success"> 
+                        <input type="submit" value="Enviar" name="enviar" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Registrado Correctamente
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
                         <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>
                 </form>
@@ -73,15 +91,13 @@ if(isset($_POST['enviar'])){
     <script type="text/javascript" src="../others/icons/js/all.js"></script>
     <script type="text/javascript" src="../others/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-
-        $(document).ready(function(){
+        $(document).ready(function() {
 
             var height = $(window).height();
 
             $('#contenedor').height(height);
         });
-
-</script>
+    </script>
 
 </head>
 
