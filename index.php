@@ -24,7 +24,7 @@ $fallos_sesion=false;
                 }
             }
         }else{
-            $fallos_sesion=true;
+            $fallos_sesion=true; 
             }
     }
 

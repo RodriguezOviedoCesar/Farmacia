@@ -63,7 +63,7 @@ $result = $mysqli->query($sql);
                                 </td>
                                 <td style="border:none">
                                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                                        <a href="">
+                                        <a href="../model/modificardoctores.php?iddoctor=<?php echo $doctores['iddoctor']?>">
                                             <button class="btn btn-warning me-md-2" type="button">
                                                 <i class="fas fa-user-edit"></i>
                                             </button>
