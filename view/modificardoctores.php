@@ -57,13 +57,12 @@ if (isset($_GET['iddoctor'])) {
                 if($flag == 1){
                 ?>
             <div id="formulario">
-                <form action="<?php //echo $_SERVER['PHP_SELF'] 
-                                ?>" method="POST">
+                <form action="../model/modificar.php" method="POST">
                     NOMBRES: <input type="text" name="names" placeholder="Nombres de doctores" class="form-control" id="validationDefault01" value="<?php echo $datos['Nombre']?>" required>
                     ESPECIALIDAD: <input type="text" name="espe" placeholder="Especialidad del doctor" class="form-control" id="validationDefault01" value="<?php echo $datos['Especialidad']?>" required>
                     NRO. COLEGIADO: <input type="text" name="num" placeholder="Nro de Colegiado" class="form-control" id="validationDefault01" value="<?php echo $datos['ncolegiado']?>" required>
                     CARGO: <input type="text" name="cargo" placeholder="Cargo que desarrolla" class="form-control" id="validationDefault01" value="<?php echo $datos['Cargo']?>" required>
-                    <input type="hidden" name="miID" value="value="<?php echo $datos['iddoctor']?>"">
+                    <input type="hidden" name="miID" value="<?php echo $datos['iddoctor']?>">
                     <div id="botones">
                         <input type="submit" value="Enviar" name="enviare" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
