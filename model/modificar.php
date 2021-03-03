@@ -14,16 +14,17 @@ if(isset($_POST['enviare'])){
     
 
     if(!empty($nombre) && !empty($espe) && !empty($num) && !empty($cargo) && !empty($id)){
-        echo $id."<br>";
         $sql = "UPDATE doctor SET Nombre = '$nombre', Especialidad = '$espe' , ncolegiado = '$num', Cargo = '$cargo' 
         WHERE iddoctor = $id";
 
         $result = $mysqli->query($sql);
 
         if($result){
-            echo "HOla";
+            require('../others/succes.php');
+            Regresar('doctores');
         }else{
-            echo "FFFF";
+            require('../others/error.php');
+            Regresar('doctores');
         }
     }else{
        $errors[] = "Rellena todos los campos";  
