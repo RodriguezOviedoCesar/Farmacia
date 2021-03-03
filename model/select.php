@@ -8,7 +8,7 @@ class Select
         $this->data = $data;
     }
 
-    public function Select1(string $data, $datos, $parametros)
+    public function Select1(string $data, $datos, $parametros, string $ref)
     {
         require_once '../model/conexion.php';
         // foreach($dato as $dat){
@@ -114,13 +114,12 @@ class Select
                         } catch (Exception $errors) {
                             echo "Excepcion  " . $errors;
                         }
-                    }
-                }
+
 
                 ?>
                     </table>
-                    <div style="position: absolute; margin-top:30px; margin-left:15px" class="d-grid gap-2 d-md-flex justify-content-md-end" >
-                        <a href="">
+                    <div style="margin-bottom: 50px; margin-top:-45px; margin-right:150px " class="d-grid gap-2 d-md-flex justify-content-md-end" >
+                        <a href="../view/<?php echo $ref?>.php">
                             <button class="btn btn-success me-md-2" type="button">
                                 <span>Agregar
                                     <i class="fas fa-user-plus"></i>
@@ -136,7 +135,7 @@ class Select
                         </a>
                     </div>
                 </div>
-            </div>
+            </div >
         </body>
 
         <head>
@@ -145,3 +144,8 @@ class Select
         </head>
 
         </html>
+
+        <?php
+                               }
+                            }
+        ?>

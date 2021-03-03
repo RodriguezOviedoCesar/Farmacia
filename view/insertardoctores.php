@@ -1,28 +1,3 @@
-<?php
-
-require '../model/conexion.php';
-
-$errors = array();
-
-if (isset($_POST['enviar'])) {
-    //Si existe el elemento 
-    $nombre = $_POST['names'];
-    $especialidad = $_POST['espe'];
-    $colegiado = $_POST['num'];
-    $cargo = $_POST['cargo'];
-
-    if (!empty($nombre) && !empty($especialidad) && !empty($colegiado) && !empty($cargo)) {
-        //No se encuentra vacia ninguna variable
-        $sql = "INSERT INTO doctor (Nombre,Especialidad,ncolegiado,Cargo) VALUES ('$nombre','$especialidad','$colegiado','$cargo')";
-        $resul = $mysqli->query($sql);
-        if($resul){
-            return "Registrado correctamente";
-        }
-    }
-} else {
-    $errors[] = "Rellena Todos los campos";
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,13 +19,13 @@ if (isset($_POST['enviar'])) {
                 <h1>Registro de Doctores</h1>
             </div>
             <div id="formulario">
-                <form action="<?php //echo $_SERVER['PHP_SELF'] ?>" method="POST">
+                <form action="../model/insertar.php" method="POST">
                     NOMBRES: <input type="text" name="names" placeholder="Nombres de doctores" class="form-control" id="validationDefault01" required>
                     ESPECIALIDAD: <input type="text" name="espe" placeholder="Especialidad del doctor" class="form-control" id="validationDefault01" required>
                     NRO. COLEGIADO: <input type="text" name="num" placeholder="Nro de Colegiado" class="form-control" id="validationDefault01" required>
                     CARGO: <input type="text" name="cargo" placeholder="Cargo que desarrolla" class="form-control" id="validationDefault01" required>
                     <div id="botones">
-                        <input type="submit" value="Enviar" name="enviar" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <input type="submit" value="Enviar" name="enviare" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
