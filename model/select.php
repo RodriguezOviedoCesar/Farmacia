@@ -8,7 +8,7 @@ class Select
         $this->data = $data;
     }
 
-    public function Select1(string $data, $datos, $parametros, string $ref)
+    public function Select1(string $data, $datos, $parametros, string $ref, string $ref2)
     {
         require_once '../model/conexion.php';
         // foreach($dato as $dat){
@@ -84,7 +84,7 @@ class Select
                                             </td>
                                             <td style="border:none">
                                                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                                                    <a href="">
+                                                    <a href="../view/<?php echo $ref2?>.php?<?php echo $datos[0]?>=<?php echo $id[$datos[0]]?>">
                                                         <button class="btn btn-warning me-md-2" type="button">
                                                             <i class="fas fa-user-edit"></i>
                                                         </button>

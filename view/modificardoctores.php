@@ -42,7 +42,7 @@ if (isset($_GET['iddoctor'])) {
     <div id="contenedor">
         <div id="contenedor1">
             <div id="title">
-                <h1>Registro de Doctores</h1>
+                <h1>Modificar de Doctores</h1>
             </div>
             <?php
                 
