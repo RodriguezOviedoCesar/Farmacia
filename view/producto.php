@@ -8,7 +8,7 @@ $datos = array('idproducto','nomprod', 'fechahoravenc','stock','presentacion','c
 'formafarmaceutica','registrosanitario','precionuit');
 $parametros = array('ID','Nombre','Vence','Stock','Presentación', 'Concentración', 'Comprimido','Registro',
 'Precio');
-$producto->Select1('producto',$datos , $parametros);
+$producto->Select1('producto',$datos , $parametros,'iproducto');
 
 
 ?>
