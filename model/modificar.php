@@ -49,9 +49,9 @@ if($_POST['enviare']){
         if(!empty($tcli) && !empty($nombre) && !empty($dir) && !empty($tel) && !empty($correo) && !empty($tdoc) && !empty($ndoc) && !empty($id)){
             $sql = "UPDATE cliente SET idtipocliente = '$tcli', nombres = '$nombre' , direccion = '$dir', telefono = '$tel'  , 
             correo = '$correo', idtipodocumento = '$tdoc', nrodocumento = '$ndoc' WHERE idcliente = $id";
-    
+
             $result = $mysqli->query($sql);
-    
+        
             if($result){
                 require('../others/succes.php');
                 Regresar('clientes');
