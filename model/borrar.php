@@ -42,6 +42,8 @@ function Borrar($data, $id, $idC)
                     width: 90%;
                     display: flex;
                     justify-content: start;
+                    flex-direction: column;
+                    padding: 25px;
                 }
             </style>
         </head>
@@ -63,11 +65,10 @@ function Borrar($data, $id, $idC)
                         Error al borrar el registro
                     </div>
                             <?php
-                            }
-                        }
-                            ?>
 
-                    <div style="margin-bottom: 15px;">
+                        }
+                        ?>
+                        <div >
                         <?php
                         if ($_GET['idproducto']) {
                             Imprimir('producto');
@@ -80,6 +81,10 @@ function Borrar($data, $id, $idC)
                         }
                         ?>
                     </div>
+                        <?php
+
+                        }
+                            ?>
                 </div>
             </div>
 

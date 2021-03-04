@@ -37,13 +37,13 @@ class Select
                     <table class="table" style="margin-bottom: 80px;">
                         <tr class="table-dark">
                             <?php
-                            foreach ($parametros as $parametro) {
-                                for ($i = 0; $i <= 0; $i++) {
-                                    echo "<th>";
-                                    echo $parametro;
-                                    echo "</th>";
+                                foreach ($parametros as $parametro) {
+                                    for ($i = 0; $i <= 0; $i++) {
+                                        echo "<th>";
+                                        echo $parametro;
+                                        echo "</th>";
+                                    }
                                 }
-                            }
 
                             ?>
                         </tr>
