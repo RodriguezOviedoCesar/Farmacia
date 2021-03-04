@@ -54,10 +54,10 @@ if($_POST['enviare']){
     
             if($result){
                 require('../others/succes.php');
-                Regresar('doctores');
+                Regresar('clientes');
             }else{
                 require('../others/error.php');
-                Regresar('doctores');
+                Regresar('clientes');
             }
         }else{
            $errors[] = "Rellena todos los campos";  

@@ -91,7 +91,7 @@ if (isset($_GET['idcliente'])) {
                 if($flag == 1){
                 ?>
             <div id="formulario">
-                <form action="../model/insertar.php" method="POST">
+                <form action="../model/modificar.php" method="POST">
                     TIPO CLIENTE :  <select name="idtipocliente" value="<?php echo $datos['idtipocliente']?>" class="form-select" aria-label="Default select example" required>
                                         <option value="1">Frecuente</option>
                                         <option value="2">Regular</option>
