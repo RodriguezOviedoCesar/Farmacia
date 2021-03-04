@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(0);
+
 require '../model/conexion.php';
 
 $errors = array();
