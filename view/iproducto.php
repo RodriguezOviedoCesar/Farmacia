@@ -54,11 +54,8 @@
             </div>
             <div id="formulario">
                 <form action="../model/insertar.php" method="POST">
-                    TIPO CLIENTE :  <select name="idtipocliente" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">Frecuente</option>
-                                        <option value="2">Regular</option>
-                                    </select>
-                    NOMBRES: <input type="text" name="names" placeholder="Nombres" class="form-control" id="validationDefault01" required>
+                    NOMBRE: <input type="text" name="names" placeholder="Nombres" class="form-control" id="validationDefault01" required>
+                    FECHA: <input type="date" name="fecha" id="fecha">
                     DIRECCIÓN: <input type="text" name="direc" placeholder="Direccion" class="form-control" id="validationDefault01" required>
                     TELEFONO: <input type="text" name="tel" placeholder="Telefono" class="form-control" id="validationDefault01" required>
                     CORREO: <input type="email" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@mail.com" require>
@@ -68,7 +65,7 @@
                                     </select>
                     NRO DOCUMENTO: <input type="text" name="nrodocumento" placeholder="Numero del documento de indentificacion" class="form-control" id="validationDefault01" required>
                     <div id="botones">
-                    <input type="submit" value="Enviar" name="enviarc" class="btn btn-success">
+                    <input type="submit" value="Enviar" name="enviarpr" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>

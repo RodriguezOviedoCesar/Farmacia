@@ -6,10 +6,10 @@ $errors = array(); /* Almacena errores */
 
 $flag = 0; /* Almacena un valor binario */
 
-if (isset($_GET['idcliente'])) {
-    $id_cli = $mysqli->real_escape_string($_GET['idcliente']);
+if (isset($_GET['idempleado'])) {
+    $idemp = $mysqli->real_escape_string($_GET['idempleado']);
     if (!empty($id_cli)) {
-        $sql = "SELECT * FROM cliente WHERE idcliente = $id_cli";
+        $sql = "SELECT * FROM cliente WHERE idempleado = $idemp";
         $result = $mysqli->query($sql);
         if ($result->num_rows > 0) {
             $flag = 1;
