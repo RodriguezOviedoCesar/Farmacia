@@ -36,7 +36,7 @@ if($e){
     if (isset($_POST['enviarc'])) {
         //Si existe el elemento 
         $id = $_POST['idtipocliente'];
-        $nombre = $_POST['names'];
+        $nombre = $_POST['names'];  
         $direccion = $_POST['direc'];
         $telefono = $_POST['tel'];
         $correo = $_POST['email'];

@@ -21,7 +21,11 @@
             <div id="formulario">
                 <form action="../model/insertar.php" method="POST">
                     NOMBRES: <input type="text" name="names" placeholder="Nombres de doctores" class="form-control" id="validationDefault01" required>
-                    ESPECIALIDAD: <input type="text" name="espe" placeholder="Especialidad del doctor" class="form-control" id="validationDefault01" required>
+                    ESPECIALIDAD: <select name="espe" class="form-select" aria-label="Default select example" required>
+                                        <option value="Cirujano">Cirujano</option>
+                                        <option value="Pediatra">Pediatra</option>
+                                        <option value="Odontologo">Odontologo</option>
+                                    </select>
                     NRO. COLEGIADO: <input type="text" name="num" placeholder="Nro de Colegiado" class="form-control" id="validationDefault01" required>
                     CARGO: <input type="text" name="cargo" placeholder="Cargo que desarrolla" class="form-control" id="validationDefault01" required>
                     <div id="botones">
