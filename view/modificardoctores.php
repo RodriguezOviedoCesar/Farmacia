@@ -59,7 +59,28 @@ if (isset($_GET['iddoctor'])) {
             <div id="formulario">
                 <form action="../model/modificar.php" method="POST">
                     NOMBRES: <input type="text" name="names" placeholder="Nombres de doctores" class="form-control" id="validationDefault01" value="<?php echo $datos['Nombre']?>" required>
-                    ESPECIALIDAD: <input type="text" name="espe" placeholder="Especialidad del doctor" class="form-control" id="validationDefault01" value="<?php echo $datos['Especialidad']?>" required>
+                    <?php echo $datos['Especialidad']; ?>
+                    ESPECIALIDAD:<select name='espe' class='form-select' aria-label='Default select example' required>
+                                        <?php
+                                        if($datos['Especialidad'] == 'Cirujano'){
+                                            echo "<option select value='Cirujano'>Cirujano</option>";
+                                            echo "<option  value='Pediatra'>Pediatra</option>";
+                                            echo "<option  value='Odontologo'>Odontologo</option>";
+                                        }else if($datos['Especialidad'] == 'Pediatra'){
+                                            
+                                            echo "<option select value='Pediatra'>Pediatra</option>";
+                                            echo "<option  value='Cirujano'>Cirujano</option>";
+                                            echo "<option  value='Odontologo'>Odontologo</option>";
+                                            
+                                        }else{
+                                            echo "<option select value='Odontologo'>Odontologo</option>";
+                                            echo "<option  value='Cirujano'>Cirujano</option>";
+                                            echo "<option  value='Pediatra'>Pediatra</option>";
+                                            
+                                            
+                                        }
+                                        ?>
+                                    </select>
                     NRO. COLEGIADO: <input type="text" name="num" placeholder="Nro de Colegiado" class="form-control" id="validationDefault01" value="<?php echo $datos['ncolegiado']?>" required>
                     CARGO: <input type="text" name="cargo" placeholder="Cargo que desarrolla" class="form-control" id="validationDefault01" value="<?php echo $datos['Cargo']?>" required>
                     <input type="hidden" name="miID" value="<?php echo $datos['iddoctor']?>">
