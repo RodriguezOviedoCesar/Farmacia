@@ -92,6 +92,72 @@ if($_POST['enviare']){
 
         }
         
-}
+}else if($_POST['enviarpr']){
+    if(isset($_POST['enviarpr'])){
+        $nombre = $_POST['names'];
+        $fecha = $_POST['fecha'];  
+        $stock = $_POST['stock'];
+        $presentacion = $_POST['presentacion'];
+        $concentracion = $_POST['concentracion'];
+        $forfar = $_POST['forfar'];
+        $regsan = $_POST['regsan'];
+        $porcentajedes = $_POST['pocentajedes'];
+        $precio = $_POST['precio'];
+        $id = $_POST['miID'];
+
+        if (!empty($nombre) && !empty($fecha) && !empty($stock) && !empty($presentacion) && !empty($concentracion)
+         && !empty($forfar) && !empty($regsan) && !empty($porcentajedes) && !empty($precio) && !empty($id)){
+            $sql = "UPDATE producto SET nomprod = '$nombre', fechahoravenc = '$fecha' , stock = '$stock', presentacion = '$presentacion'  , 
+            concentracion = '$concentracion', formafarmaceutica = '$forfar', registrosanitario = '$regsan' ,
+            idporcentajedescuento = $porcentajedes, precionuit = $precio WHERE idproducto = $id";
+
+            $result = $mysqli->query($sql);
+        
+            if($result){
+                require('../others/succes.php');
+                Regresar('producto');
+            }else{
+                require('../others/error.php');
+                Regresar('producto');
+            }
+        }else{
+           $errors[] = "Rellena todos los campos";  
+        }
+
+    }
+}else if($_POST['enviarp']){
+    if(isset($_POST['enviarp'])){
+        $nombre = $_POST['names'];
+        $fecha = $_POST['fecha'];  
+        $stock = $_POST['stock'];
+        $presentacion = $_POST['presentacion'];
+        $concentracion = $_POST['concentracion'];
+        $forfar = $_POST['forfar'];
+        $regsan = $_POST['regsan'];
+        $porcentajedes = $_POST['pocentajedes'];
+        $precio = $_POST['precio'];
+        $id = $_POST['miID'];
+
+        if (!empty($nombre) && !empty($fecha) && !empty($stock) && !empty($presentacion) && !empty($concentracion)
+         && !empty($forfar) && !empty($regsan) && !empty($porcentajedes) && !empty($precio) && !empty($id)){
+            $sql = "UPDATE producto SET nomprod = '$nombre', fechahoravenc = '$fecha' , stock = '$stock', presentacion = '$presentacion'  , 
+            concentracion = '$concentracion', formafarmaceutica = '$forfar', registrosanitario = '$regsan' ,
+            idporcentajedescuento = $porcentajedes, precionuit = $precio WHERE idproducto = $id";
+
+            $result = $mysqli->query($sql);
+        
+            if($result){
+                require('../others/succes.php');
+                Regresar('producto');
+            }else{
+                require('../others/error.php');
+                Regresar('producto');
+            }
+        }else{
+           $errors[] = "Rellena todos los campos";  
+        }
+
+    }
+}  
 
 ?>

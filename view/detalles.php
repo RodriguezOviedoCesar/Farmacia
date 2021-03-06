@@ -96,6 +96,15 @@ $result = $mysqli->query($sql);
                 }
                 ?>
             </table>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 150px; margin-bottom:50px">
+                <a href="../view/index.php">
+                    <button class="btn btn-primary" type="button">
+                        <span>Regresar
+                            <i class="fas fa-arrow-circle-left"></i>
+                        </span>
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 </body>

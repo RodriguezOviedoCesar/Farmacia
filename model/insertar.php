@@ -10,6 +10,7 @@ $e = $_POST['enviare'];
 $c = $_POST['enviarc'];
 $em = $_POST['enviarem'];
 $pro = $_POST['enviarpr'];
+$pe = $_POST['enviarp'];
 
 if($e){
     if (isset($_POST['enviare'])) {
@@ -119,7 +120,5 @@ if($e){
     } else {
         $errors[] = "Rellena Todos los campos";
     }
-}else{
-    echo "ERROR";
 }
 ?>

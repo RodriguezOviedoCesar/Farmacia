@@ -91,23 +91,13 @@ if (isset($_GET['idcliente'])) {
                 if($flag == 1){
                 ?>
             <div id="formulario">
-                <form action="../model/modificar.php" method="POST">
-                    TIPO CLIENTE :  <select name="idtipocliente" value="<?php echo $datos['idtipocliente']?>" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">Frecuente</option>
-                                        <option value="2">Regular</option>
-                                    </select>
-                    NOMBRES: <input type="text" name="names" value="<?php echo $datos['nombres']?>" class="form-control" id="validationDefault01" required>
-                    DIRECCIÓN: <input type="text" name="direc" value="<?php echo $datos['direccion']?>" class="form-control" id="validationDefault01" required>
-                    TELEFONO: <input type="text" name="tel" value="<?php echo $datos['telefono']?>" class="form-control" id="validationDefault01" required>
-                    CORREO: <input type="email" name = "email" value="<?php echo $datos['correo']?>" class="form-control" id="exampleFormControlInput1" require>
-                    TIPO DOCUMENTO :  <select name="tipodoc" class="form-select" value="<?php echo $datos['idtipodocumento']?>" aria-label="Default select example" required>
-                                        <option value="1">DNI</option>
-                                        <option value="2">PASAPORTE</option>
-                                    </select>
-                    NRO DOCUMENTO: <input type="text" name="nrodocumento" value="<?php echo $datos['nrodocumento']?>" class="form-control" id="validationDefault01" required>
-                    <input type="hidden" name="miID" value="<?php echo $datos['idcliente']?>">
+            <form action="../model/insertar.php" method="POST">
+                    FECHA PEDIDO: <input type="datetime" name="fecha" placeholder="YYYY-MM-DD" class="form-control" id="validationDefault01" required>
+                    MONTO TOTAL: <input type="number" name="precio" placeholder="Precio total" class="form-control" id="validationDefault01" required >
+                    CLIENTE: 
+                    VENDEDOR: 
                     <div id="botones">
-                    <input type="submit" value="Modificar" name="enviarc" class="btn btn-success">
+                    <input type="submit" value="Registrar" name="enviarp" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>

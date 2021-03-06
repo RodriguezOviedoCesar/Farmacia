@@ -54,28 +54,19 @@
             </div>
             <div id="formulario">
                 <form action="../model/insertar.php" method="POST">
-                    TIPO CLIENTE :  <select name="idtipocliente" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">Frecuente</option>
-                                        <option value="2">Regular</option>
-                                    </select>
-                    NOMBRES: <input type="text" name="names" placeholder="Nombres" class="form-control" id="validationDefault01" required>
-                    DIRECCIÓN: <input type="text" name="direc" placeholder="Direccion" class="form-control" id="validationDefault01" required>
-                    TELEFONO: <input type="text" name="tel" placeholder="Telefono" class="form-control" id="validationDefault01" required>
-                    CORREO: <input type="email" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@mail.com" require>
-                    TIPO DOCUMENTO :  <select name="tipodoc" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">DNI</option>
-                                        <option value="2">PASAPORTE</option>
-                                    </select>
-                    NRO DOCUMENTO: <input type="text" name="nrodocumento" placeholder="Numero del documento de indentificacion" class="form-control" id="validationDefault01" required>
+                    FECHA PEDIDO: <input type="datetime" name="fecha" placeholder="YYYY-MM-DD" class="form-control" id="validationDefault01" required>
+                    MONTO TOTAL: <input type="number" name="precio" placeholder="Precio total" class="form-control" id="validationDefault01" required >
+                    CLIENTE: 
+                    VENDEDOR: 
                     <div id="botones">
-                    <input type="submit" value="Registrar" name="enviarc" class="btn btn-success">
+                    <input type="submit" value="Registrar" name="enviarp" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>
                 </form>
             </div>
             <div id="regresar">
-                <a href="../view/clientes.php">
+                <a href="../view/pedido.php">
                     <button class="btn btn-info">
                         <span>Regresar
                             <i class="fas fa-undo"></i>
