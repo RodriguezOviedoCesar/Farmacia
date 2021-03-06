@@ -94,7 +94,7 @@ if (isset($_GET['idproducto'])) {
                 if($flag == 1){
                 ?>
             <div id="formulario">
-            <form action="../model/insertar.php" method="POST">
+            <form action="../model/modificar.php" method="POST">
                     NOMBRE: <input value="<?php echo $datos['nomprod']?>" type="text" name="names" placeholder="Nombres" class="form-control" id="validationDefault01" required>
                     FECHA VENCIMIENTO: <input value="<?php echo $datos['fechahoravenc']?>" type="datetimelocal" name="fecha" class="form-control" id="validationDefault01" placeholder="YYYY-MM-DD" required>
                     STOCK: <input value="<?php echo $datos['stock']?>" type="number" name="stock" placeholder="stock" class="form-control" id="validationDefault01" required>
