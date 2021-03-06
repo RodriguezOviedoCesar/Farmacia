@@ -102,6 +102,14 @@
                         <a href="../view/pedidos.php" class="btn btn-dark ">Ir a Pedidos</a>
                     </div>
                 </div>
+                <div class="card " style="width: 18rem;flex-basis: 28%; margin: 15px;">
+                    <img src="../others/img/detallepedido.png" class="card-img-top img-fluid" alt="... " style="height: 250px; width: 250px; margin: 0 auto; margin-top:15px">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Detalle Pedidos</h5>
+                        <p class="card-text ">Mostar lista de Pedidos</p>
+                        <a href="../view/detalles.php" class="btn btn-dark ">Ir a Pedidos</a>
+                    </div>
+                </div>
             </div>
 
         </div>
