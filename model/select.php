@@ -37,13 +37,13 @@ class Select
                     <table class="table" style="margin-bottom: 80px;">
                         <tr class="table-dark">
                             <?php
-                                foreach ($parametros as $parametro) {
-                                    for ($i = 0; $i <= 0; $i++) {
-                                        echo "<th>";
-                                        echo $parametro;
-                                        echo "</th>";
-                                    }
+                            foreach ($parametros as $parametro) {
+                                for ($i = 0; $i <= 0; $i++) {
+                                    echo "<th>";
+                                    echo $parametro;
+                                    echo "</th>";
                                 }
+                            }
 
                             ?>
                         </tr>
@@ -53,7 +53,7 @@ class Select
                             $errors = array();
                             $sql = "SELECT * FROM $data ";
                             $result = $mysqli->query($sql);
-                            
+
                             // $id = $result->fetch_assoc();            
                             // $fila = $result->fetch_assoc();
                             // echo "</div>";
@@ -75,7 +75,7 @@ class Select
                                             ?>
                                             <td style="border: none;">
                                                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                                    <a href="../model/borrar.php?<?php echo $datos[0]?>=<?php echo $id[$datos[0]]?>">
+                                                    <a href="../model/borrar.php?<?php echo $datos[0] ?>=<?php echo $id[$datos[0]] ?>">
                                                         <button class="btn btn-danger me-md-2" type="button">
                                                             <i class="fas fa-trash"></i>
                                                         </button>
@@ -84,23 +84,38 @@ class Select
                                             </td>
                                             <td style="border:none">
                                                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                                                    <a href="../view/<?php echo $ref2?>.php?<?php echo $datos[0]?>=<?php echo $id[$datos[0]]?>">
+                                                    <a href="../view/<?php echo $ref2 ?>.php?<?php echo $datos[0] ?>=<?php echo $id[$datos[0]] ?>">
                                                         <button class="btn btn-warning me-md-2" type="button">
                                                             <i class="fas fa-user-edit"></i>
                                                         </button>
                                                     </a>
                                                 </div>
                                             </td>
+                                            <?php
+                                            if ($datos[0] === 'nropedido') {
+                                            ?>
+                                                <td style="border:none">
+                                                <div class="d-grid gap-2 d-md-flex justify-content-md-start" style="margin-right:-100px">
+                                                    <a href="../view/vpedidos.php?<?php echo $datos[0] ?>=<?php echo $id[$datos[0]] ?>">
+                                                        <button class="btn btn-warning me-md-2" type="button">
+                                                            <i class="far fa-eye"></i>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <?php
+                                            }
+                                            ?>
 
                                         </tr>
-                <?php
+                        <?php
 
                                     }
-                                }else{
-                                    $errors [] = "No hay registros para mostrar";
+                                } else {
+                                    $errors[] = "No hay registros para mostrar";
                                 }
-                            }else{
-                                $errors [] = "No hay registros para mostrar";
+                            } else {
+                                $errors[] = "No hay registros para mostrar";
                             }
 
                             if (count($errors) > 0) {
@@ -110,16 +125,15 @@ class Select
                                 }
                                 echo "</div>";
                             }
-
                         } catch (Exception $errors) {
                             echo "Excepcion  " . $errors;
                         }
 
 
-                ?>
+                        ?>
                     </table>
-                    <div style="margin-bottom: 50px; margin-top:-45px; margin-right:150px " class="d-grid gap-2 d-md-flex justify-content-md-end" >
-                        <a href="../view/<?php echo $ref?>.php">
+                    <div style="margin-bottom: 50px; margin-top:-45px; margin-right:150px " class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="../view/<?php echo $ref ?>.php">
                             <button class="btn btn-success me-md-2" type="button">
                                 <span>Agregar
                                     <i class="fas fa-user-plus"></i>
@@ -135,7 +149,7 @@ class Select
                         </a>
                     </div>
                 </div>
-            </div >
+            </div>
         </body>
 
         <head>
@@ -145,7 +159,7 @@ class Select
 
         </html>
 
-        <?php
-                               }
-                            }
-        ?>
+<?php
+    }
+}
+?>
