@@ -59,7 +59,7 @@
                     DIRECCIÓN: <input type="text" name="direc" placeholder="Direccion" class="form-control" id="validationDefault01" required>
                     TELEFONO: <input type="text" name="tel" placeholder="Telefono" class="form-control" id="validationDefault01" required>
                     CORREO: <input type="email" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@mail.com" require>
-                    TIPO DOCUMENTO :  <select name="tipodoc" class="form-select" aria-label="Default select example" required>
+                    TIPO DOCUMENTO: <select name="tipodoc" class="form-select" aria-label="Default select example" required>
                                         <option value="1">DNI</option>
                                         <option value="2">PASAPORTE</option>
                                     </select>
