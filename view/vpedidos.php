@@ -97,8 +97,8 @@ if (isset($_GET['nropedido'])) {
                     NUMERO PEDIDO: <input type="text" name="names" value="<?php echo $datos['nropedido']?>" class="form-control" id="validationDefault01" disabled>
                     FECHA PEDIDO: <input type="text" name="direc" value="<?php echo $datos['fechapedido']?>" class="form-control" id="validationDefault01" disabled>
                     MONTO: <input type="text" name="tel" value="<?php echo $datos['montototal']?>" class="form-control" id="validationDefault01" disabled>
-                    NOMBRES: <input type="email" name = "email" value="<?php echo $datos['names']?>" class="form-control" id="exampleFormControlInput1" disabled>
-                    NOMBRES: <input type="text" name="nrodocumento" value="<?php echo $datos['nombres']?>" class="form-control" id="validationDefault01" disabled>
+                    NOMBRE CLIENTE: <input type="email" name = "email" value="<?php echo $datos['names']?>" class="form-control" id="exampleFormControlInput1" disabled>
+                    NOMBRE VENDEDOR: <input type="text" name="nrodocumento" value="<?php echo $datos['nombres']?>" class="form-control" id="validationDefault01" disabled>
                 </form>
             </div>                
             <?php

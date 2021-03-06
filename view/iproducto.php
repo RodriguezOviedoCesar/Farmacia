@@ -19,8 +19,10 @@
 
         #contenedor1{
             width: 40%;
+            height: 105%;
             margin-top: 55px;
             padding: 15px;
+            margin-bottom: 25px;
         }
         #title{
             display: flex;
@@ -42,37 +44,40 @@
             display: flex;
             justify-content: center;
             margin: 15px;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 
 <body>
     <div id="contenedor">
-        <div id="contenedor1" class="shadow p-3 mb-5 bg-body rounded">
+        <div id="contenedor1" class="shadow p-3 mb-5 bg-body rounded h-100%">
             <div id="title">
-                <h1>Registro de Clientes</h1>
+                <h1>Registro de Productos</h1>
             </div>
             <div id="formulario">
                 <form action="../model/insertar.php" method="POST">
                     NOMBRE: <input type="text" name="names" placeholder="Nombres" class="form-control" id="validationDefault01" required>
-                    FECHA: <input type="date" name="fecha" id="fecha">
-                    DIRECCIÓN: <input type="text" name="direc" placeholder="Direccion" class="form-control" id="validationDefault01" required>
-                    TELEFONO: <input type="text" name="tel" placeholder="Telefono" class="form-control" id="validationDefault01" required>
-                    CORREO: <input type="email" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@mail.com" require>
-                    TIPO DOCUMENTO :  <select name="tipodoc" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">DNI</option>
-                                        <option value="2">PASAPORTE</option>
-                                    </select>
-                    NRO DOCUMENTO: <input type="text" name="nrodocumento" placeholder="Numero del documento de indentificacion" class="form-control" id="validationDefault01" required>
+                    FECHA VENCIMIENTO: <input type="datetimelocal" name="fecha" class="form-control" id="validationDefault01" placeholder="YYYY-MM-DD" required>
+                    STOCK: <input type="number" name="stock" placeholder="stock" class="form-control" id="validationDefault01" required>
+                    PRESENTACION: <input type="text" name="presentacion" placeholder="Presentacion" class="form-control" id="validationDefault01" required>
+                    CONCENTRACION: <input type="text" name = "concentracion" class="form-control" id="exampleFormControlInput1" placeholder="Concentracion" require>
+                    FORMA FARMACEUTICA: <input type="text" name = "forfar" class="form-control" id="exampleFormControlInput1" placeholder="Forma farmaceutica" require>
+                    REGISTRO SANITARIO: <input type="text" name="regsan" placeholder="Registro sanitario" class="form-control" id="validationDefault01" required>
+                    PORCENTAJE DESCUENTO:   <select name="pocentajedes" class="form-select" aria-label="Default select example" required>
+                                                <option value="1">No hay descuento</option>
+                                                <option value="2">Descuento del 5%</option>
+                                            </select>
+                    PRECIO: <input type="number" name = "precio" class="form-control" id="exampleFormControlInput1" placeholder="Precio" require>
                     <div id="botones">
-                    <input type="submit" value="Enviar" name="enviarpr" class="btn btn-success">
+                    <input type="submit" value="Registrar" name="enviarpr" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>
                 </form>
             </div>
             <div id="regresar">
-                <a href="../view/clientes.php">
+                <a href="../view/producto.php">
                     <button class="btn btn-info">
                         <span>Regresar
                             <i class="fas fa-undo"></i>

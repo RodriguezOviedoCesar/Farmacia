@@ -45,8 +45,10 @@ if (isset($_GET['idproducto'])) {
 
         #contenedor1{
             width: 40%;
+            height: 105%;
             margin-top: 55px;
             padding: 15px;
+            margin-bottom: 25px;
         }
         #title{
             display: flex;
@@ -68,6 +70,7 @@ if (isset($_GET['idproducto'])) {
             display: flex;
             justify-content: center;
             margin: 15px;
+            margin-bottom: 25px;
         }
     </style>
 </head>
@@ -91,23 +94,33 @@ if (isset($_GET['idproducto'])) {
                 if($flag == 1){
                 ?>
             <div id="formulario">
-                <form action="../model/modificar.php" method="POST">
-                    TIPO CLIENTE :  <select name="idtipocliente" value="<?php echo $datos['idtipocliente']?>" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">Frecuente</option>
-                                        <option value="2">Regular</option>
-                                    </select>
-                    NOMBRES: <input type="text" name="names" value="<?php echo $datos['nombres']?>" class="form-control" id="validationDefault01" required>
-                    DIRECCIÓN: <input type="text" name="direc" value="<?php echo $datos['direccion']?>" class="form-control" id="validationDefault01" required>
-                    TELEFONO: <input type="text" name="tel" value="<?php echo $datos['telefono']?>" class="form-control" id="validationDefault01" required>
-                    CORREO: <input type="email" name = "email" value="<?php echo $datos['correo']?>" class="form-control" id="exampleFormControlInput1" require>
-                    TIPO DOCUMENTO :  <select name="tipodoc" class="form-select" value="<?php echo $datos['idtipodocumento']?>" aria-label="Default select example" required>
-                                        <option value="1">DNI</option>
-                                        <option value="2">PASAPORTE</option>
-                                    </select>
-                    NRO DOCUMENTO: <input type="text" name="nrodocumento" value="<?php echo $datos['nrodocumento']?>" class="form-control" id="validationDefault01" required>
-                    <input type="hidden" name="miID" value="<?php echo $datos['idcliente']?>">
+            <form action="../model/insertar.php" method="POST">
+                    NOMBRE: <input value="<?php echo $datos['nomprod']?>" type="text" name="names" placeholder="Nombres" class="form-control" id="validationDefault01" required>
+                    FECHA VENCIMIENTO: <input value="<?php echo $datos['fechahoravenc']?>" type="datetimelocal" name="fecha" class="form-control" id="validationDefault01" placeholder="YYYY-MM-DD" required>
+                    STOCK: <input value="<?php echo $datos['stock']?>" type="number" name="stock" placeholder="stock" class="form-control" id="validationDefault01" required>
+                    PRESENTACION: <input value="<?php echo $datos['presentacion']?>" type="text" name="presentacion" placeholder="Presentacion" class="form-control" id="validationDefault01" required>
+                    CONCENTRACION: <input value="<?php echo $datos['concentracion']?>" type="text" name = "concentracion" class="form-control" id="exampleFormControlInput1" placeholder="Concentracion" require>
+                    FORMA FARMACEUTICA: <input value="<?php echo $datos['formafarmaceutica']?>" type="text" name = "forfar" class="form-control" id="exampleFormControlInput1" placeholder="Forma farmaceutica" require>
+                    REGISTRO SANITARIO: <input value="<?php echo $datos['registrosanitario']?>" type="text" name="regsan" placeholder="Registro sanitario" class="form-control" id="validationDefault01" required>
+                    PORCENTAJE DESCUENTO:   <select name="pocentajedes" class="form-select" aria-label="Default select example" required>
+                                                <?php 
+                                                    if($datos['idprocentajedescuento'] == 1){
+                                                ?>     
+                                                    <option value="1">No hay descuento</option>
+                                                    <option value="2">Descuento del 5%</option>
+                                                <?php        
+                                                    }else{
+                                                ?>
+                                                    <option value="2">Descuento del 5%</option>
+                                                    <option value="1">No hay descuento</option>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </select>
+                    PRECIO: <input value="<?php echo $datos['precionuit']?>" type="number" name = "precio" class="form-control" id="exampleFormControlInput1" placeholder="Precio" require>
+                    <input type="hidden" name="miID" value="<?php echo $datos['idproducto']?>">
                     <div id="botones">
-                    <input type="submit" value="Enviar" name="enviarc" class="btn btn-success">
+                    <input type="submit" value="Modificar" name="enviarpr" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>
@@ -118,7 +131,7 @@ if (isset($_GET['idproducto'])) {
                 ?>
 
             <div id="regresar">
-                <a href="../view/clientes.php">
+                <a href="../view/producto.php">
                     <button class="btn btn-info">
                         <span>Regresar
                             <i class="fas fa-undo"></i>

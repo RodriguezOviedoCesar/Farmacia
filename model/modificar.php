@@ -63,6 +63,35 @@ if($_POST['enviare']){
            $errors[] = "Rellena todos los campos";  
         }
     }
+}else if($_POST['enviarem']){
+        if(isset($_POST['enviarem'])){
+            $tipoes = $_POST['idtipoestado'];
+            $cargo = $_POST['idcargoempleado'];  
+            $dni = $_POST['dni'];
+            $nombres = $_POST['names'];
+            $direccion = $_POST['direccion'];
+            $tel = $_POST['telefono'];
+            $id = $_POST['miID'];
+
+            if(!empty($tipoes) && !empty($cargo) && !empty($dni) && !empty($nombres) && !empty($direccion) && !empty($tel) &&  !empty($id)){
+                $sql = "UPDATE empleado SET idtipoestado = '$tipoes', idcargoempleado = '$cargo' , dni = '$dni', nombres = '$nombres'  , 
+                direccion = '$direccion', telefono = '$tel' WHERE idempleado = $id";
+    
+                $result = $mysqli->query($sql);
+            
+                if($result){
+                    require('../others/succes.php');
+                    Regresar('empleado');
+                }else{
+                    require('../others/error.php');
+                    Regresar('empleado');
+                }
+            }else{
+               $errors[] = "Rellena todos los campos";  
+            }
+
+        }
+        
 }
 
 ?>

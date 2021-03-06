@@ -68,7 +68,7 @@
                                     </select>
                     NRO DOCUMENTO: <input type="text" name="nrodocumento" placeholder="Numero del documento de indentificacion" class="form-control" id="validationDefault01" required>
                     <div id="botones">
-                    <input type="submit" value="Enviar" name="enviarc" class="btn btn-success">
+                    <input type="submit" value="Registrar" name="enviarc" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>

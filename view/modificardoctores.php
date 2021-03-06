@@ -82,7 +82,7 @@ if (isset($_GET['iddoctor'])) {
                     CARGO: <input type="text" name="cargo" placeholder="Cargo que desarrolla" class="form-control" id="validationDefault01" value="<?php echo $datos['Cargo']?>" required>
                     <input type="hidden" name="miID" value="<?php echo $datos['iddoctor']?>">
                     <div id="botones">
-                        <input type="submit" value="Enviar" name="enviare" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <input type="submit" value="Modificar" name="enviare" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     
 
                         <input type="reset" value="Cancelar" class="btn btn-danger">

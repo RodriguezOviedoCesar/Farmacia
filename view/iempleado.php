@@ -54,28 +54,27 @@
             </div>
             <div id="formulario">
                 <form action="../model/insertar.php" method="POST">
-                    TIPO CLIENTE :  <select name="idtipocliente" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">Frecuente</option>
-                                        <option value="2">Regular</option>
+                    ESTADO :  <select name="idtipoestado" class="form-select" aria-label="Default select example" required>
+                                        <option value="1">Activo</option>
+                                        <option value="2">Inactivo</option>
                                     </select>
-                    NOMBRES: <input type="text" name="names" placeholder="Nombres" class="form-control" id="validationDefault01" required>
-                    DIRECCIÓN: <input type="text" name="direc" placeholder="Direccion" class="form-control" id="validationDefault01" required>
-                    TELEFONO: <input type="text" name="tel" placeholder="Telefono" class="form-control" id="validationDefault01" required>
-                    CORREO: <input type="email" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@mail.com" require>
-                    TIPO DOCUMENTO :  <select name="tipodoc" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">DNI</option>
-                                        <option value="2">PASAPORTE</option>
+                    CARGO :  <select name="idcargoempleado" class="form-select" aria-label="Default select example" required>
+                                        <option value="1">Administrador</option>
+                                        <option value="2">Tesorero</option>
                                     </select>
-                    NRO DOCUMENTO: <input type="text" name="nrodocumento" placeholder="Numero del documento de indentificacion" class="form-control" id="validationDefault01" required>
+                    DNI: <input type="text" name="dni" placeholder="DNI" class="form-control" id="validationDefault01" required>
+                    NOMBRES: <input type="text" name="names" placeholder="Nombre" class="form-control" id="validationDefault01" required>
+                    DIRECCION: <input type="text" name="direccion" placeholder="Direccion" class="form-control" id="validationDefault01" required>
+                    TELEFONO: <input type="text" name = "telefono" class="form-control" id="exampleFormControlInput1" placeholder="telefono" require>
                     <div id="botones">
-                    <input type="submit" value="Enviar" name="enviarc" class="btn btn-success">
+                    <input type="submit" value="Registrar" name="enviarem" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>
                 </form>
             </div>
             <div id="regresar">
-                <a href="../view/clientes.php">
+                <a href="../view/empleado.php">
                     <button class="btn btn-info">
                         <span>Regresar
                             <i class="fas fa-undo"></i>

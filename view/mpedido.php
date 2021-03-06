@@ -107,7 +107,7 @@ if (isset($_GET['idcliente'])) {
                     NRO DOCUMENTO: <input type="text" name="nrodocumento" value="<?php echo $datos['nrodocumento']?>" class="form-control" id="validationDefault01" required>
                     <input type="hidden" name="miID" value="<?php echo $datos['idcliente']?>">
                     <div id="botones">
-                    <input type="submit" value="Enviar" name="enviarc" class="btn btn-success">
+                    <input type="submit" value="Modificar" name="enviarc" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>

@@ -29,7 +29,7 @@
                     NRO. COLEGIADO: <input type="text" name="num" placeholder="Nro de Colegiado" class="form-control" id="validationDefault01" required>
                     CARGO: <input type="text" name="cargo" placeholder="Cargo que desarrolla" class="form-control" id="validationDefault01" required>
                     <div id="botones">
-                    <input type="submit" value="Enviar" name="enviare" class="btn btn-success">
+                    <input type="submit" value="Registrar" name="enviare" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>

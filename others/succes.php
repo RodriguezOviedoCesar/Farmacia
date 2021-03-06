@@ -34,7 +34,7 @@ function Regresar($refe){
     <div id="contenedor">
         <div id="contenedor1">
             <div class="alert alert-success" role="alert">
-                Registro modificado correctamente
+                Ejecucucion echa correctamente
             </div>
 
         </div>   

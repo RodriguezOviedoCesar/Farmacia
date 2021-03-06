@@ -8,14 +8,14 @@ $flag = 0; /* Almacena un valor binario */
 
 if (isset($_GET['idempleado'])) {
     $idemp = $mysqli->real_escape_string($_GET['idempleado']);
-    if (!empty($id_cli)) {
-        $sql = "SELECT * FROM cliente WHERE idempleado = $idemp";
+    if (!empty($idemp)) {
+        $sql = "SELECT * FROM empleado WHERE idempleado = $idemp";
         $result = $mysqli->query($sql);
         if ($result->num_rows > 0) {
             $flag = 1;
             $datos = $result->fetch_assoc();
         } else {
-            $errors[] = "No hay ningun doctor con ese registro";
+            $errors[] = "No hay ningun empelado con ese registro";
         }
     } else {
         $errors[] = "No se encontro ningun doctor con ese ID";
@@ -76,7 +76,7 @@ if (isset($_GET['idempleado'])) {
     <div id="contenedor">
         <div id="contenedor1" class="shadow p-3 mb-5 bg-body rounded">
             <div id="title">
-                <h1>Modificar de Clientes</h1>
+                <h1>Modificar datos de <?php echo $datos['nombres']?></h1>
             </div>
             <?php
                 
@@ -90,35 +90,54 @@ if (isset($_GET['idempleado'])) {
                 
                 if($flag == 1){
                 ?>
-            <div id="formulario">
-                <form action="../model/modificar.php" method="POST">
-                    TIPO CLIENTE :  <select name="idtipocliente" value="<?php echo $datos['idtipocliente']?>" class="form-select" aria-label="Default select example" required>
-                                        <option value="1">Frecuente</option>
-                                        <option value="2">Regular</option>
+             <form action="../model/modificar.php" method="POST">
+                    ESTADO :  <select name="idtipoestado" class="form-select" aria-label="Default select example" required>
+                    <?php
+                                            if($datos['idtipoestado'] == 1){
+                                        ?>
+                                            <option select value="1">Activo</option>
+                                            <option value="2">Inactivo</option>
+                                        <?php
+                                            }else{
+                                        ?>
+                                            <option select value="2">Inactivo</option>
+                                            <option value="1">Activo</option>
+                                        <?php
+                                            }
+                                        ?>
                                     </select>
-                    NOMBRES: <input type="text" name="names" value="<?php echo $datos['nombres']?>" class="form-control" id="validationDefault01" required>
-                    DIRECCIÓN: <input type="text" name="direc" value="<?php echo $datos['direccion']?>" class="form-control" id="validationDefault01" required>
-                    TELEFONO: <input type="text" name="tel" value="<?php echo $datos['telefono']?>" class="form-control" id="validationDefault01" required>
-                    CORREO: <input type="email" name = "email" value="<?php echo $datos['correo']?>" class="form-control" id="exampleFormControlInput1" require>
-                    TIPO DOCUMENTO :  <select name="tipodoc" class="form-select" value="<?php echo $datos['idtipodocumento']?>" aria-label="Default select example" required>
-                                        <option value="1">DNI</option>
-                                        <option value="2">PASAPORTE</option>
+                    CARGO :  <select name="idcargoempleado" class="form-select" aria-label="Default select example" required>
+                                        <?php
+                                            if($datos['idcargoempleado'] == 1){
+                                        ?>
+                                            <option select value="1">Administrador</option>
+                                            <option value="2">Tesorero</option>
+                                        <?php
+                                            }else{
+                                        ?>
+                                            <option select value="2">Tesorero</option>
+                                            <option value="1">Administrador</option>
+                                        <?php
+                                            }
+                                        ?>
                                     </select>
-                    NRO DOCUMENTO: <input type="text" name="nrodocumento" value="<?php echo $datos['nrodocumento']?>" class="form-control" id="validationDefault01" required>
-                    <input type="hidden" name="miID" value="<?php echo $datos['idcliente']?>">
+                    DNI: <input value="<?php echo $datos['dni']?>" type="text" name="dni" placeholder="DNI" class="form-control" id="validationDefault01" required>
+                    NOMBRES: <input value="<?php echo $datos['nombres']?>" type="text" name="names" placeholder="Nombre" class="form-control" id="validationDefault01" required>
+                    DIRECCION: <input value="<?php echo $datos['direccion']?>" type="text" name="direccion" placeholder="Direccion" class="form-control" id="validationDefault01" required>
+                    TELEFONO: <input value="<?php echo $datos['telefono']?>" type="text" name = "telefono" class="form-control" id="exampleFormControlInput1" placeholder="telefono" require>
+                    <input type="hidden" name="miID" value="<?php echo $datos['idempleado']?>">
                     <div id="botones">
-                    <input type="submit" value="Enviar" name="enviarc" class="btn btn-success">
+                    <input type="submit" value="Modificar" name="enviarem" class="btn btn-success">
 
                     <input type="reset" value="Cancelar" class="btn btn-danger">
                     </div>
-                </form>
-            </div>                
+                </form>               
             <?php
                 }
                 ?>
 
             <div id="regresar">
-                <a href="../view/clientes.php">
+                <a href="../view/empleado.php">
                     <button class="btn btn-info">
                         <span>Regresar
                             <i class="fas fa-undo"></i>
